@@ -1,0 +1,420 @@
+2026-10-07 13:30:00 WARN  [scheduler] slow query 874ms
+2026-10-07 13:30:02 INFO  [scheduler] request handled in 157ms user_id=1950
+2026-10-07 13:30:04 INFO  [auth] request handled in 30ms user_id=8104
+2026-10-07 13:30:06 DEBUG [api-gateway] cache hit ratio=63%
+2026-10-07 13:30:08 DEBUG [auth] cache hit ratio=96%
+2026-10-07 13:30:10 DEBUG [cache] cache hit ratio=62%
+2026-10-07 13:30:12 DEBUG [api-gateway] cache hit ratio=69%
+2026-10-07 13:30:14 DEBUG [auth] cache hit ratio=95%
+2026-10-07 13:30:16 INFO  [api-gateway] request handled in 34ms user_id=4078
+2026-10-07 13:30:18 INFO  [payment] request handled in 190ms user_id=2028
+2026-10-07 13:30:20 INFO  [payment] health check ok
+2026-10-07 13:30:22 INFO  [scheduler] health check ok
+2026-10-07 13:30:24 INFO  [api-gateway] request handled in 211ms user_id=3945
+2026-10-07 13:30:26 INFO  [payment] health check ok
+2026-10-07 13:30:28 INFO  [mailer] request handled in 122ms user_id=5717
+2026-10-07 13:30:30 INFO  [auth] health check ok
+2026-10-07 13:30:32 DEBUG [api-gateway] cache hit ratio=62%
+2026-10-07 13:30:34 DEBUG [auth] cache hit ratio=81%
+2026-10-07 13:30:36 INFO  [scheduler] health check ok
+2026-10-07 13:30:38 INFO  [auth] health check ok
+2026-10-07 13:30:40 DEBUG [mailer] cache hit ratio=63%
+2026-10-07 13:30:42 DEBUG [mailer] cache hit ratio=78%
+2026-10-07 13:30:44 INFO  [cache] health check ok
+2026-10-07 13:30:46 INFO  [scheduler] request handled in 51ms user_id=2918
+2026-10-07 13:30:48 DEBUG [api-gateway] cache hit ratio=68%
+2026-10-07 13:30:50 INFO  [api-gateway] request handled in 109ms user_id=7405
+2026-10-07 13:30:52 INFO  [api-gateway] health check ok
+2026-10-07 13:30:54 INFO  [api-gateway] health check ok
+2026-10-07 13:30:56 INFO  [mailer] request handled in 114ms user_id=6878
+2026-10-07 13:30:58 INFO  [api-gateway] request handled in 29ms user_id=3887
+2026-10-07 13:31:00 DEBUG [mailer] cache hit ratio=91%
+2026-10-07 13:31:02 INFO  [api-gateway] request handled in 75ms user_id=5619
+2026-10-07 13:31:04 DEBUG [cache] cache hit ratio=99%
+2026-10-07 13:31:06 DEBUG [scheduler] cache hit ratio=99%
+2026-10-07 13:31:08 DEBUG [mailer] cache hit ratio=89%
+2026-10-07 13:31:10 INFO  [payment] health check ok
+2026-10-07 13:31:12 INFO  [auth] request handled in 131ms user_id=7560
+2026-10-07 13:31:14 WARN  [auth] slow query 912ms
+2026-10-07 13:31:16 DEBUG [payment] cache hit ratio=60%
+2026-10-07 13:31:18 DEBUG [api-gateway] cache hit ratio=83%
+2026-10-07 13:31:20 INFO  [auth] health check ok
+2026-10-07 13:31:22 DEBUG [api-gateway] cache hit ratio=82%
+2026-10-07 13:31:24 INFO  [scheduler] health check ok
+2026-10-07 13:31:26 INFO  [cache] request handled in 130ms user_id=8927
+2026-10-07 13:31:28 INFO  [api-gateway] health check ok
+2026-10-07 13:31:30 INFO  [mailer] request handled in 49ms user_id=9459
+2026-10-07 13:31:32 INFO  [payment] request handled in 100ms user_id=3401
+2026-10-07 13:31:34 DEBUG [payment] cache hit ratio=76%
+2026-10-07 13:31:36 INFO  [scheduler] request handled in 240ms user_id=3736
+2026-10-07 13:31:38 DEBUG [payment] cache hit ratio=81%
+2026-10-07 13:31:40 INFO  [api-gateway] health check ok
+2026-10-07 13:31:42 DEBUG [mailer] cache hit ratio=72%
+2026-10-07 13:31:44 INFO  [cache] health check ok
+2026-10-07 13:31:46 INFO  [cache] health check ok
+2026-10-07 13:31:48 INFO  [cache] request handled in 214ms user_id=6726
+2026-10-07 13:31:50 INFO  [api-gateway] request handled in 34ms user_id=4716
+2026-10-07 13:31:52 DEBUG [scheduler] cache hit ratio=99%
+2026-10-07 13:31:54 DEBUG [auth] cache hit ratio=65%
+2026-10-07 13:31:56 INFO  [auth] health check ok
+2026-10-07 13:31:58 DEBUG [api-gateway] cache hit ratio=65%
+2026-10-07 13:32:00 DEBUG [cache] cache hit ratio=65%
+2026-10-07 13:32:02 INFO  [api-gateway] request handled in 51ms user_id=3081
+2026-10-07 13:32:04 DEBUG [payment] cache hit ratio=69%
+2026-10-07 13:32:06 DEBUG [payment] cache hit ratio=69%
+2026-10-07 13:32:08 DEBUG [payment] cache hit ratio=60%
+2026-10-07 13:32:10 INFO  [mailer] health check ok
+2026-10-07 13:32:12 INFO  [api-gateway] health check ok
+2026-10-07 13:32:14 DEBUG [api-gateway] cache hit ratio=75%
+2026-10-07 13:32:16 INFO  [scheduler] request handled in 74ms user_id=9918
+2026-10-07 13:32:18 DEBUG [auth] cache hit ratio=89%
+2026-10-07 13:32:20 DEBUG [payment] cache hit ratio=86%
+2026-10-07 13:32:22 DEBUG [api-gateway] cache hit ratio=93%
+2026-10-07 13:32:24 DEBUG [auth] cache hit ratio=71%
+2026-10-07 13:32:26 INFO  [auth] request handled in 206ms user_id=3454
+2026-10-07 13:32:28 WARN  [cache] slow query 863ms
+2026-10-07 13:32:30 INFO  [mailer] health check ok
+2026-10-07 13:32:32 INFO  [auth] request handled in 234ms user_id=1930
+2026-10-07 13:32:34 INFO  [scheduler] health check ok
+2026-10-07 13:32:36 INFO  [payment] health check ok
+2026-10-07 13:32:38 DEBUG [payment] cache hit ratio=72%
+2026-10-07 13:32:40 INFO  [scheduler] health check ok
+2026-10-07 13:32:42 DEBUG [payment] cache hit ratio=76%
+2026-10-07 13:32:44 INFO  [api-gateway] health check ok
+2026-10-07 13:32:46 INFO  [auth] request handled in 108ms user_id=8243
+2026-10-07 13:32:48 INFO  [mailer] request handled in 69ms user_id=8017
+2026-10-07 13:32:50 DEBUG [mailer] cache hit ratio=69%
+2026-10-07 13:32:52 INFO  [mailer] health check ok
+2026-10-07 13:32:54 INFO  [api-gateway] health check ok
+2026-10-07 13:32:56 DEBUG [cache] cache hit ratio=70%
+2026-10-07 13:32:58 INFO  [cache] health check ok
+2026-10-07 13:33:00 DEBUG [api-gateway] cache hit ratio=65%
+2026-10-07 13:33:02 INFO  [scheduler] health check ok
+2026-10-07 13:33:04 INFO  [cache] health check ok
+2026-10-07 13:33:06 INFO  [payment] request handled in 167ms user_id=5840
+2026-10-07 13:33:08 INFO  [auth] request handled in 209ms user_id=4744
+2026-10-07 13:33:10 INFO  [scheduler] health check ok
+2026-10-07 13:33:12 INFO  [api-gateway] health check ok
+2026-10-07 13:33:14 INFO  [api-gateway] health check ok
+2026-10-07 13:33:16 INFO  [mailer] request handled in 91ms user_id=2465
+2026-10-07 13:33:18 INFO  [mailer] health check ok
+2026-10-07 13:33:20 INFO  [auth] request handled in 170ms user_id=2451
+2026-10-07 13:33:22 INFO  [payment] health check ok
+2026-10-07 13:33:24 DEBUG [auth] cache hit ratio=81%
+2026-10-07 13:33:26 DEBUG [cache] cache hit ratio=62%
+2026-10-07 13:33:28 INFO  [mailer] health check ok
+2026-10-07 13:33:30 DEBUG [auth] cache hit ratio=79%
+2026-10-07 13:33:32 INFO  [scheduler] health check ok
+2026-10-07 13:33:34 INFO  [payment] health check ok
+2026-10-07 13:33:36 INFO  [auth] request handled in 72ms user_id=1605
+2026-10-07 13:33:38 INFO  [mailer] health check ok
+2026-10-07 13:33:40 DEBUG [api-gateway] cache hit ratio=87%
+2026-10-07 13:33:42 WARN  [cache] slow query 1115ms
+2026-10-07 13:33:44 INFO  [api-gateway] health check ok
+2026-10-07 13:33:46 INFO  [scheduler] request handled in 21ms user_id=3126
+2026-10-07 13:33:48 INFO  [mailer] request handled in 197ms user_id=5187
+2026-10-07 13:33:50 DEBUG [auth] cache hit ratio=92%
+2026-10-07 13:33:52 INFO  [scheduler] request handled in 161ms user_id=4968
+2026-10-07 13:33:54 INFO  [cache] health check ok
+2026-10-07 13:33:56 DEBUG [auth] cache hit ratio=81%
+2026-10-07 13:33:58 INFO  [scheduler] request handled in 70ms user_id=1564
+2026-10-07 13:34:00 INFO  [scheduler] health check ok
+2026-10-07 13:34:02 DEBUG [auth] cache hit ratio=92%
+2026-10-07 13:34:04 INFO  [api-gateway] request handled in 71ms user_id=9269
+2026-10-07 13:34:06 INFO  [scheduler] health check ok
+2026-10-07 13:34:08 INFO  [payment] health check ok
+2026-10-07 13:34:10 DEBUG [scheduler] cache hit ratio=65%
+2026-10-07 13:34:12 INFO  [payment] health check ok
+2026-10-07 13:34:14 INFO  [scheduler] health check ok
+2026-10-07 13:34:16 DEBUG [mailer] cache hit ratio=62%
+2026-10-07 13:34:18 INFO  [payment] request handled in 168ms user_id=8032
+2026-10-07 13:34:20 INFO  [payment] request handled in 200ms user_id=9263
+2026-10-07 13:34:22 INFO  [mailer] request handled in 157ms user_id=4767
+2026-10-07 13:34:24 INFO  [auth] health check ok
+2026-10-07 13:34:26 DEBUG [cache] cache hit ratio=61%
+2026-10-07 13:34:28 INFO  [payment] health check ok
+2026-10-07 13:34:30 DEBUG [auth] cache hit ratio=92%
+2026-10-07 13:34:32 DEBUG [auth] cache hit ratio=64%
+2026-10-07 13:34:34 INFO  [mailer] health check ok
+2026-10-07 13:34:36 DEBUG [api-gateway] cache hit ratio=74%
+2026-10-07 13:34:38 INFO  [mailer] request handled in 125ms user_id=9092
+2026-10-07 13:34:40 DEBUG [cache] cache hit ratio=62%
+2026-10-07 13:34:42 DEBUG [mailer] cache hit ratio=64%
+2026-10-07 13:34:44 DEBUG [api-gateway] cache hit ratio=79%
+2026-10-07 13:34:46 INFO  [payment] request handled in 42ms user_id=1204
+2026-10-07 13:34:48 DEBUG [cache] cache hit ratio=73%
+2026-10-07 13:34:50 INFO  [cache] health check ok
+2026-10-07 13:34:52 INFO  [cache] request handled in 127ms user_id=2941
+2026-10-07 13:34:54 INFO  [scheduler] health check ok
+2026-10-07 13:34:56 WARN  [cache] slow query 1075ms
+2026-10-07 13:34:58 INFO  [api-gateway] request handled in 61ms user_id=2222
+2026-10-07 13:35:00 INFO  [api-gateway] health check ok
+2026-10-07 13:35:02 INFO  [api-gateway] request handled in 162ms user_id=9335
+2026-10-07 13:35:04 INFO  [mailer] health check ok
+2026-10-07 13:35:06 INFO  [cache] health check ok
+2026-10-07 13:35:08 DEBUG [mailer] cache hit ratio=79%
+2026-10-07 13:35:10 INFO  [api-gateway] health check ok
+2026-10-07 13:35:12 INFO  [auth] health check ok
+2026-10-07 13:35:14 INFO  [scheduler] request handled in 222ms user_id=7525
+2026-10-07 13:35:16 INFO  [mailer] health check ok
+2026-10-07 13:35:18 INFO  [auth] request handled in 108ms user_id=7392
+2026-10-07 13:35:20 INFO  [scheduler] health check ok
+2026-10-07 13:35:22 INFO  [auth] request handled in 21ms user_id=5679
+2026-10-07 13:35:24 INFO  [scheduler] request handled in 119ms user_id=9371
+2026-10-07 13:35:26 DEBUG [scheduler] cache hit ratio=61%
+2026-10-07 13:35:28 DEBUG [cache] cache hit ratio=73%
+2026-10-07 13:35:30 DEBUG [auth] cache hit ratio=88%
+2026-10-07 13:35:32 INFO  [api-gateway] request handled in 172ms user_id=5689
+2026-10-07 13:35:34 INFO  [payment] health check ok
+2026-10-07 13:35:36 DEBUG [scheduler] cache hit ratio=76%
+2026-10-07 13:35:38 DEBUG [mailer] cache hit ratio=85%
+2026-10-07 13:35:40 DEBUG [api-gateway] cache hit ratio=95%
+2026-10-07 13:35:42 INFO  [cache] request handled in 38ms user_id=3741
+2026-10-07 13:35:44 INFO  [api-gateway] request handled in 136ms user_id=9144
+2026-10-07 13:35:46 INFO  [cache] health check ok
+2026-10-07 13:35:48 INFO  [api-gateway] request handled in 148ms user_id=4152
+2026-10-07 13:35:50 INFO  [api-gateway] request handled in 95ms user_id=2492
+2026-10-07 13:35:52 DEBUG [scheduler] cache hit ratio=61%
+2026-10-07 13:35:54 INFO  [cache] request handled in 106ms user_id=7781
+2026-10-07 13:35:56 INFO  [cache] health check ok
+2026-10-07 13:35:58 DEBUG [scheduler] cache hit ratio=68%
+2026-10-07 13:36:00 INFO  [payment] health check ok
+2026-10-07 13:36:02 INFO  [api-gateway] health check ok
+2026-10-07 13:36:04 INFO  [scheduler] request handled in 225ms user_id=1357
+2026-10-07 13:36:06 INFO  [cache] health check ok
+2026-10-07 13:36:08 INFO  [auth] health check ok
+2026-10-07 13:36:10 WARN  [cache] slow query 958ms
+2026-10-07 13:36:12 INFO  [payment] request handled in 182ms user_id=2784
+2026-10-07 13:36:14 INFO  [payment] request handled in 206ms user_id=1647
+2026-10-07 13:36:16 INFO  [api-gateway] request handled in 153ms user_id=1615
+2026-10-07 13:36:18 DEBUG [mailer] cache hit ratio=87%
+2026-10-07 13:36:20 DEBUG [auth] cache hit ratio=79%
+2026-10-07 13:36:22 INFO  [payment] request handled in 57ms user_id=7358
+2026-10-07 13:36:24 INFO  [payment] health check ok
+2026-10-07 13:36:26 INFO  [cache] health check ok
+2026-10-07 13:36:28 INFO  [payment] request handled in 68ms user_id=9962
+2026-10-07 13:36:30 INFO  [cache] request handled in 188ms user_id=6036
+2026-10-07 13:36:32 INFO  [api-gateway] health check ok
+2026-10-07 13:36:34 INFO  [api-gateway] request handled in 178ms user_id=7952
+2026-10-07 13:36:36 INFO  [cache] health check ok
+2026-10-07 13:36:38 INFO  [mailer] health check ok
+2026-10-07 13:36:40 INFO  [mailer] request handled in 224ms user_id=9271
+2026-10-07 13:36:42 INFO  [cache] request handled in 59ms user_id=6107
+2026-10-07 13:36:44 INFO  [cache] request handled in 64ms user_id=5342
+2026-10-07 13:36:46 INFO  [payment] health check ok
+2026-10-07 13:36:48 INFO  [cache] request handled in 178ms user_id=1924
+2026-10-07 13:36:50 DEBUG [cache] cache hit ratio=61%
+2026-10-07 13:36:52 INFO  [api-gateway] request handled in 114ms user_id=1849
+2026-10-07 13:36:54 INFO  [cache] request handled in 123ms user_id=6147
+2026-10-07 13:36:56 DEBUG [api-gateway] cache hit ratio=71%
+2026-10-07 13:36:58 INFO  [payment] health check ok
+2026-10-07 13:37:00 INFO  [mailer] health check ok
+2026-10-07 13:37:02 INFO  [cache] request handled in 51ms user_id=2785
+2026-10-07 13:37:04 INFO  [scheduler] request handled in 28ms user_id=6758
+2026-10-07 13:37:06 INFO  [payment] health check ok
+2026-10-07 13:37:08 WARN  [payment] connection pool usage 10/10 - no idle connections (pool=main_db)
+2026-10-07 13:37:10 DEBUG [mailer] cache hit ratio=83%
+2026-10-07 13:37:12 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX72198
+2026-10-07 13:37:14 INFO  [mailer] request handled in 113ms user_id=5063
+2026-10-07 13:37:16 INFO  [cache] request handled in 16ms user_id=8603
+2026-10-07 13:37:18 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX54442
+2026-10-07 13:37:20 DEBUG [scheduler] cache hit ratio=76%
+2026-10-07 13:37:22 INFO  [mailer] health check ok
+2026-10-07 13:37:24 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX24058
+2026-10-07 13:37:26 INFO  [mailer] health check ok
+2026-10-07 13:37:28 INFO  [cache] request handled in 41ms user_id=9135
+2026-10-07 13:37:30 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX40951
+2026-10-07 13:37:32 INFO  [scheduler] request handled in 125ms user_id=6928
+2026-10-07 13:37:34 INFO  [payment] request handled in 58ms user_id=7417
+2026-10-07 13:37:36 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX82429
+2026-10-07 13:37:38 INFO  [api-gateway] health check ok
+2026-10-07 13:37:40 INFO  [payment] health check ok
+2026-10-07 13:37:42 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX40696
+2026-10-07 13:37:44 DEBUG [cache] cache hit ratio=94%
+2026-10-07 13:37:46 INFO  [auth] health check ok
+2026-10-07 13:37:48 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX44122
+2026-10-07 13:37:50 INFO  [cache] request handled in 71ms user_id=4043
+2026-10-07 13:37:52 INFO  [api-gateway] request handled in 80ms user_id=4084
+2026-10-07 13:37:54 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX78984
+2026-10-07 13:37:56 INFO  [mailer] request handled in 214ms user_id=2647
+2026-10-07 13:37:58 INFO  [auth] health check ok
+2026-10-07 13:38:00 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX25625
+2026-10-07 13:38:02 INFO  [api-gateway] health check ok
+2026-10-07 13:38:04 DEBUG [payment] cache hit ratio=88%
+2026-10-07 13:38:06 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX93552
+2026-10-07 13:38:08 INFO  [api-gateway] request handled in 17ms user_id=7040
+2026-10-07 13:38:10 DEBUG [auth] cache hit ratio=62%
+2026-10-07 13:38:12 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX52893
+2026-10-07 13:38:14 INFO  [mailer] health check ok
+2026-10-07 13:38:16 DEBUG [auth] cache hit ratio=91%
+2026-10-07 13:38:18 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX61812
+2026-10-07 13:38:20 INFO  [mailer] health check ok
+2026-10-07 13:38:22 DEBUG [mailer] cache hit ratio=78%
+2026-10-07 13:38:24 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX84254
+2026-10-07 13:38:26 DEBUG [cache] cache hit ratio=83%
+2026-10-07 13:38:28 INFO  [api-gateway] request handled in 108ms user_id=7635
+2026-10-07 13:38:30 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX24881
+2026-10-07 13:38:32 INFO  [cache] request handled in 155ms user_id=6975
+2026-10-07 13:38:34 INFO  [api-gateway] request handled in 11ms user_id=1846
+2026-10-07 13:38:36 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX85086
+2026-10-07 13:38:38 WARN  [mailer] slow query 1156ms
+2026-10-07 13:38:40 INFO  [api-gateway] request handled in 141ms user_id=3814
+2026-10-07 13:38:42 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX26600
+2026-10-07 13:38:44 DEBUG [cache] cache hit ratio=98%
+2026-10-07 13:38:46 DEBUG [cache] cache hit ratio=74%
+2026-10-07 13:38:48 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX33981
+2026-10-07 13:38:50 INFO  [auth] health check ok
+2026-10-07 13:38:52 DEBUG [scheduler] cache hit ratio=75%
+2026-10-07 13:38:54 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX25431
+2026-10-07 13:38:56 INFO  [payment] health check ok
+2026-10-07 13:38:58 DEBUG [payment] cache hit ratio=84%
+2026-10-07 13:39:00 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX33430
+2026-10-07 13:39:02 INFO  [auth] request handled in 166ms user_id=9019
+2026-10-07 13:39:04 INFO  [cache] health check ok
+2026-10-07 13:39:06 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX56999
+2026-10-07 13:39:08 DEBUG [scheduler] cache hit ratio=92%
+2026-10-07 13:39:10 INFO  [mailer] request handled in 18ms user_id=1666
+2026-10-07 13:39:12 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX17112
+2026-10-07 13:39:14 INFO  [mailer] request handled in 208ms user_id=3231
+2026-10-07 13:39:16 INFO  [payment] request handled in 195ms user_id=2795
+2026-10-07 13:39:18 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX18587
+2026-10-07 13:39:20 INFO  [payment] health check ok
+2026-10-07 13:39:22 INFO  [payment] health check ok
+2026-10-07 13:39:24 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX44454
+2026-10-07 13:39:26 INFO  [scheduler] request handled in 103ms user_id=1603
+2026-10-07 13:39:28 INFO  [cache] health check ok
+2026-10-07 13:39:30 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX79562
+2026-10-07 13:39:32 DEBUG [mailer] cache hit ratio=88%
+2026-10-07 13:39:34 DEBUG [payment] cache hit ratio=76%
+2026-10-07 13:39:36 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX44701
+2026-10-07 13:39:38 INFO  [scheduler] health check ok
+2026-10-07 13:39:40 DEBUG [auth] cache hit ratio=71%
+2026-10-07 13:39:42 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX43246
+2026-10-07 13:39:44 DEBUG [mailer] cache hit ratio=60%
+2026-10-07 13:39:46 DEBUG [auth] cache hit ratio=78%
+2026-10-07 13:39:48 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX57723
+2026-10-07 13:39:50 DEBUG [api-gateway] cache hit ratio=99%
+2026-10-07 13:39:52 WARN  [auth] slow query 1380ms
+2026-10-07 13:39:54 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX80007
+2026-10-07 13:39:56 INFO  [cache] request handled in 157ms user_id=5934
+2026-10-07 13:39:58 INFO  [api-gateway] request handled in 101ms user_id=8780
+2026-10-07 13:40:00 ERROR [scheduler] job nightly_settlement holds 7 connections for 410s (job_id=JOB-7731) - possible leak, missing conn.close() in settlement.py:88
+2026-10-07 13:40:02 INFO  [auth] health check ok
+2026-10-07 13:40:04 INFO  [scheduler] health check ok
+2026-10-07 13:40:06 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX77840
+2026-10-07 13:40:08 INFO  [api-gateway] request handled in 50ms user_id=1006
+2026-10-07 13:40:10 INFO  [payment] request handled in 14ms user_id=7651
+2026-10-07 13:40:12 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX90299
+2026-10-07 13:40:14 DEBUG [api-gateway] cache hit ratio=93%
+2026-10-07 13:40:16 INFO  [mailer] request handled in 137ms user_id=7803
+2026-10-07 13:40:18 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX92046
+2026-10-07 13:40:20 INFO  [mailer] request handled in 208ms user_id=8830
+2026-10-07 13:40:22 INFO  [cache] request handled in 224ms user_id=8154
+2026-10-07 13:40:24 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX39615
+2026-10-07 13:40:26 INFO  [scheduler] health check ok
+2026-10-07 13:40:28 INFO  [mailer] health check ok
+2026-10-07 13:40:30 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX44772
+2026-10-07 13:40:32 DEBUG [mailer] cache hit ratio=65%
+2026-10-07 13:40:34 DEBUG [auth] cache hit ratio=75%
+2026-10-07 13:40:36 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX60948
+2026-10-07 13:40:38 INFO  [payment] health check ok
+2026-10-07 13:40:40 INFO  [cache] request handled in 222ms user_id=9693
+2026-10-07 13:40:42 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX50337
+2026-10-07 13:40:44 INFO  [cache] request handled in 167ms user_id=2274
+2026-10-07 13:40:46 INFO  [api-gateway] request handled in 16ms user_id=1440
+2026-10-07 13:40:48 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX13766
+2026-10-07 13:40:50 DEBUG [auth] cache hit ratio=64%
+2026-10-07 13:40:52 DEBUG [auth] cache hit ratio=72%
+2026-10-07 13:40:54 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX42319
+2026-10-07 13:40:56 DEBUG [api-gateway] cache hit ratio=62%
+2026-10-07 13:40:58 INFO  [auth] request handled in 219ms user_id=5708
+2026-10-07 13:41:00 ERROR [payment] OperationalError: QueuePool limit of size 10 overflow 0 reached, connection timed out, timeout 30.00 (code=DB_POOL_EXHAUSTED) txn_id=TX51830
+2026-10-07 13:41:02 INFO  [cache] health check ok
+2026-10-07 13:41:04 DEBUG [scheduler] cache hit ratio=80%
+2026-10-07 13:41:06 WARN  [payment] slow query 831ms
+2026-10-07 13:41:08 INFO  [auth] health check ok
+2026-10-07 13:41:10 DEBUG [cache] cache hit ratio=94%
+2026-10-07 13:41:12 INFO  [api-gateway] health check ok
+2026-10-07 13:41:14 INFO  [api-gateway] request handled in 119ms user_id=1021
+2026-10-07 13:41:16 INFO  [scheduler] health check ok
+2026-10-07 13:41:18 INFO  [cache] health check ok
+2026-10-07 13:41:20 DEBUG [payment] cache hit ratio=76%
+2026-10-07 13:41:22 INFO  [api-gateway] health check ok
+2026-10-07 13:41:24 DEBUG [api-gateway] cache hit ratio=91%
+2026-10-07 13:41:26 INFO  [payment] health check ok
+2026-10-07 13:41:28 INFO  [auth] health check ok
+2026-10-07 13:41:30 INFO  [mailer] health check ok
+2026-10-07 13:41:32 INFO  [scheduler] request handled in 117ms user_id=9928
+2026-10-07 13:41:34 INFO  [cache] request handled in 234ms user_id=4826
+2026-10-07 13:41:36 DEBUG [payment] cache hit ratio=82%
+2026-10-07 13:41:38 DEBUG [scheduler] cache hit ratio=88%
+2026-10-07 13:41:40 INFO  [payment] health check ok
+2026-10-07 13:41:42 INFO  [cache] request handled in 184ms user_id=5214
+2026-10-07 13:41:44 DEBUG [api-gateway] cache hit ratio=75%
+2026-10-07 13:41:46 INFO  [api-gateway] request handled in 76ms user_id=5939
+2026-10-07 13:41:48 DEBUG [mailer] cache hit ratio=80%
+2026-10-07 13:41:50 INFO  [payment] health check ok
+2026-10-07 13:41:52 DEBUG [api-gateway] cache hit ratio=70%
+2026-10-07 13:41:54 INFO  [auth] request handled in 58ms user_id=7295
+2026-10-07 13:41:56 INFO  [scheduler] health check ok
+2026-10-07 13:41:58 INFO  [api-gateway] request handled in 35ms user_id=2750
+2026-10-07 13:42:00 INFO  [cache] health check ok
+2026-10-07 13:42:02 DEBUG [cache] cache hit ratio=92%
+2026-10-07 13:42:04 INFO  [scheduler] health check ok
+2026-10-07 13:42:06 DEBUG [payment] cache hit ratio=60%
+2026-10-07 13:42:08 DEBUG [api-gateway] cache hit ratio=96%
+2026-10-07 13:42:10 DEBUG [mailer] cache hit ratio=74%
+2026-10-07 13:42:12 DEBUG [mailer] cache hit ratio=71%
+2026-10-07 13:42:14 INFO  [auth] health check ok
+2026-10-07 13:42:16 INFO  [mailer] request handled in 187ms user_id=2603
+2026-10-07 13:42:18 INFO  [cache] health check ok
+2026-10-07 13:42:20 WARN  [cache] slow query 1219ms
+2026-10-07 13:42:22 INFO  [mailer] health check ok
+2026-10-07 13:42:24 INFO  [auth] request handled in 17ms user_id=5116
+2026-10-07 13:42:26 INFO  [api-gateway] health check ok
+2026-10-07 13:42:28 INFO  [auth] request handled in 224ms user_id=8483
+2026-10-07 13:42:30 DEBUG [mailer] cache hit ratio=61%
+2026-10-07 13:42:32 DEBUG [scheduler] cache hit ratio=86%
+2026-10-07 13:42:34 DEBUG [cache] cache hit ratio=85%
+2026-10-07 13:42:36 INFO  [auth] health check ok
+2026-10-07 13:42:38 INFO  [scheduler] request handled in 105ms user_id=7548
+2026-10-07 13:42:40 DEBUG [auth] cache hit ratio=82%
+2026-10-07 13:42:42 DEBUG [scheduler] cache hit ratio=79%
+2026-10-07 13:42:44 INFO  [cache] health check ok
+2026-10-07 13:42:46 DEBUG [api-gateway] cache hit ratio=64%
+2026-10-07 13:42:48 INFO  [api-gateway] health check ok
+2026-10-07 13:42:50 INFO  [mailer] health check ok
+2026-10-07 13:42:52 INFO  [payment] health check ok
+2026-10-07 13:42:54 INFO  [api-gateway] health check ok
+2026-10-07 13:42:56 DEBUG [mailer] cache hit ratio=60%
+2026-10-07 13:42:58 INFO  [scheduler] health check ok
+2026-10-07 13:43:00 DEBUG [cache] cache hit ratio=99%
+2026-10-07 13:43:02 INFO  [auth] health check ok
+2026-10-07 13:43:04 INFO  [cache] health check ok
+2026-10-07 13:43:06 INFO  [api-gateway] request handled in 143ms user_id=6654
+2026-10-07 13:43:08 DEBUG [mailer] cache hit ratio=64%
+2026-10-07 13:43:10 INFO  [scheduler] request handled in 72ms user_id=2663
+2026-10-07 13:43:12 INFO  [api-gateway] request handled in 55ms user_id=8404
+2026-10-07 13:43:14 INFO  [api-gateway] request handled in 239ms user_id=7594
+2026-10-07 13:43:16 DEBUG [payment] cache hit ratio=95%
+2026-10-07 13:43:18 DEBUG [scheduler] cache hit ratio=73%
+2026-10-07 13:43:20 DEBUG [auth] cache hit ratio=67%
+2026-10-07 13:43:22 INFO  [auth] request handled in 75ms user_id=7865
+2026-10-07 13:43:24 INFO  [cache] health check ok
+2026-10-07 13:43:26 INFO  [api-gateway] health check ok
+2026-10-07 13:43:28 INFO  [api-gateway] health check ok
+2026-10-07 13:43:30 INFO  [cache] health check ok
+2026-10-07 13:43:32 INFO  [scheduler] request handled in 117ms user_id=7861
+2026-10-07 13:43:34 WARN  [mailer] slow query 1424ms
+2026-10-07 13:43:36 DEBUG [mailer] cache hit ratio=66%
+2026-10-07 13:43:38 INFO  [cache] request handled in 132ms user_id=3367
+2026-10-07 13:43:40 INFO  [mailer] request handled in 114ms user_id=3079
+2026-10-07 13:43:42 DEBUG [mailer] cache hit ratio=90%
+2026-10-07 13:43:44 INFO  [payment] health check ok
+2026-10-07 13:43:46 INFO  [scheduler] request handled in 116ms user_id=5121
+2026-10-07 13:43:48 INFO  [scheduler] health check ok
+2026-10-07 13:43:50 INFO  [scheduler] health check ok
+2026-10-07 13:43:52 INFO  [api-gateway] health check ok
+2026-10-07 13:43:54 DEBUG [api-gateway] cache hit ratio=68%
+2026-10-07 13:43:56 DEBUG [mailer] cache hit ratio=85%
+2026-10-07 13:43:58 DEBUG [payment] cache hit ratio=94%

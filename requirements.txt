@@ -1,0 +1,6 @@
+# Runtime. Khớp với [project].dependencies trong pyproject.toml (Python >= 3.11).
+langchain>=1.4.3,<2
+langchain-openai>=1.6.7,<2
+python-dotenv>=1.2.4,<2
+pyyaml>=6.0.3,<7
+streamlit>=1.65.0,<2

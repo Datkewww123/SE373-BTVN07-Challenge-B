@@ -1,0 +1,745 @@
+2026-10-07 19:07:14,631 ERROR Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1979, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1318, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\_base_client.py", line 1440, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\_base_client.py", line 1213, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'object': 'error', 'message': 'Rate limit exceeded', 'type': 'rate_limited', 'param': None, 'code': '1300', 'raw_status_code': 429}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\stage-02-skills\app.py", line 457, in run_turn
+    for mode, chunk in stream:
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3034, in stream
+    for _ in runner.tick(
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 345, in tick
+    _panic_or_proceed(
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 689, in _panic_or_proceed
+    raise exc
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\_executor.py", line 80, in done
+    task.result()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain\agents\factory.py", line 1543, in model_node
+    result = wrap_model_call_handler(request, _execute_model_sync)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain\agents\factory.py", line 327, in normalized_single
+    return _to_composed_result(single_handler(request, handler))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langsmith\run_helpers.py", line 849, in wrapper
+    function_result = run_container["context"].run(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\stage-02-skills\observer.py", line 132, in wrap_model_call
+    response = handler(request)  # gọi đúng một lần
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain\agents\factory.py", line 1506, in _execute_model_sync
+    output = model_.invoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6014, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 488, in invoke
+    self.generate_prompt(
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1877, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1684, in generate
+    self._generate_with_cache(
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 2022, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1984, in _generate
+    _handle_openai_api_error(e)
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 736, in _handle_openai_api_error
+    raise OpenAIRateLimitError(
+langchain_openai.chat_models.base.OpenAIRateLimitError: Error code: 429 - {'object': 'error', 'message': 'Rate limit exceeded', 'type': 'rate_limited', 'param': None, 'code': '1300', 'raw_status_code': 429}
+During task with name 'model' and id '555cc16c-2746-9afa-c473-056cdea033b1'
+
+2026-10-21 09:54:11,708 ERROR Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1979, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1318, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\_base_client.py", line 1440, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\_base_client.py", line 1213, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - [{'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).', 'status': 'NOT_FOUND'}}]
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\stage-02-skills\app.py", line 457, in run_turn
+    for mode, chunk in stream:
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3034, in stream
+    for _ in runner.tick(
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 345, in tick
+    _panic_or_proceed(
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 689, in _panic_or_proceed
+    raise exc
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\_executor.py", line 80, in done
+    task.result()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain\agents\factory.py", line 1543, in model_node
+    result = wrap_model_call_handler(request, _execute_model_sync)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain\agents\factory.py", line 327, in normalized_single
+    return _to_composed_result(single_handler(request, handler))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langsmith\run_helpers.py", line 849, in wrapper
+    function_result = run_container["context"].run(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\stage-02-skills\observer.py", line 132, in wrap_model_call
+    response = handler(request)  # gọi đúng một lần
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain\agents\factory.py", line 1506, in _execute_model_sync
+    output = model_.invoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6014, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 488, in invoke
+    self.generate_prompt(
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1877, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1684, in generate
+    self._generate_with_cache(
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 2022, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1984, in _generate
+    _handle_openai_api_error(e)
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 732, in _handle_openai_api_error
+    raise OpenAIModelNotFoundError(
+langchain_openai.chat_models.base.OpenAIModelNotFoundError: Error code: 404 - [{'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/get-started).', 'status': 'NOT_FOUND'}}]
+During task with name 'model' and id '219aaa37-48e7-c928-f4e5-4a54dcf7e28f'
+
+2026-10-21 09:56:09,800 ERROR Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1979, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1318, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\_base_client.py", line 1440, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\_base_client.py", line 1213, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Function call is missing a thought_signature in functionCall parts. This is required for tools to work correctly, and missing thought_signature may lead to degraded model performance. Additional data, function call `default_api:save_memory` , position 2. Please refer to https://ai.google.dev/gemini-api/docs/thought-signatures for more details.', 'status': 'INVALID_ARGUMENT'}}]
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\stage-02-skills\app.py", line 457, in run_turn
+    for mode, chunk in stream:
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3034, in stream
+    for _ in runner.tick(
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 345, in tick
+    _panic_or_proceed(
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 689, in _panic_or_proceed
+    raise exc
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\_executor.py", line 80, in done
+    task.result()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain\agents\factory.py", line 1543, in model_node
+    result = wrap_model_call_handler(request, _execute_model_sync)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain\agents\factory.py", line 327, in normalized_single
+    return _to_composed_result(single_handler(request, handler))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langsmith\run_helpers.py", line 849, in wrapper
+    function_result = run_container["context"].run(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\stage-02-skills\observer.py", line 132, in wrap_model_call
+    response = handler(request)  # gọi đúng một lần
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain\agents\factory.py", line 1506, in _execute_model_sync
+    output = model_.invoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6014, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 488, in invoke
+    self.generate_prompt(
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1877, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1684, in generate
+    self._generate_with_cache(
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 2022, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1982, in _generate
+    _handle_openai_bad_request(e)
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 712, in _handle_openai_bad_request
+    raise OpenAIInvalidRequestError(
+langchain_openai.chat_models.base.OpenAIInvalidRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Function call is missing a thought_signature in functionCall parts. This is required for tools to work correctly, and missing thought_signature may lead to degraded model performance. Additional data, function call `default_api:save_memory` , position 2. Please refer to https://ai.google.dev/gemini-api/docs/thought-signatures for more details.', 'status': 'INVALID_ARGUMENT'}}]
+During task with name 'model' and id '2cd17fc0-8e24-6eaf-3cb3-6d330bf24b2c'
+
+2026-10-21 09:59:23,529 ERROR Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1979, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1318, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\_base_client.py", line 1440, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\openai\_base_client.py", line 1213, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.NotFoundError: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\stage-02-skills\app.py", line 457, in run_turn
+    for mode, chunk in stream:
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3034, in stream
+    for _ in runner.tick(
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 345, in tick
+    _panic_or_proceed(
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 689, in _panic_or_proceed
+    raise exc
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\_executor.py", line 80, in done
+    task.result()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain\agents\factory.py", line 1543, in model_node
+    result = wrap_model_call_handler(request, _execute_model_sync)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain\agents\factory.py", line 327, in normalized_single
+    return _to_composed_result(single_handler(request, handler))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langsmith\run_helpers.py", line 849, in wrapper
+    function_result = run_container["context"].run(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\stage-02-skills\observer.py", line 132, in wrap_model_call
+    response = handler(request)  # gọi đúng một lần
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain\agents\factory.py", line 1506, in _execute_model_sync
+    output = model_.invoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 6014, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 488, in invoke
+    self.generate_prompt(
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1877, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1684, in generate
+    self._generate_with_cache(
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 2022, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1984, in _generate
+    _handle_openai_api_error(e)
+  File "C:\Users\Admin\Downloads\agent-tools-skills-lab\agent-tools-skills-lab\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 732, in _handle_openai_api_error
+    raise OpenAIModelNotFoundError(
+langchain_openai.chat_models.base.OpenAIModelNotFoundError: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+During task with name 'model' and id '26e7fc4c-0c5e-ccfe-6993-71d39f678368'
+
+2026-10-26 16:17:36,117 ERROR Traceback (most recent call last):
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/stage-02-skills/app.py", line 484, in run_turn
+    for mode, chunk in stream:
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py", line 3034, in stream
+    for _ in runner.tick(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py", line 345, in tick
+    _panic_or_proceed(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py", line 689, in _panic_or_proceed
+    raise exc
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_executor.py", line 80, in done
+    task.result()
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain/agents/factory.py", line 1543, in model_node
+    result = wrap_model_call_handler(request, _execute_model_sync)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain/agents/factory.py", line 327, in normalized_single
+    return _to_composed_result(single_handler(request, handler))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/stage-02-skills/observer.py", line 133, in wrap_model_call
+    response = handler(request)  # gọi đúng một lần
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain/agents/factory.py", line 1506, in _execute_model_sync
+    output = model_.invoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py", line 6014, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 488, in invoke
+    self.generate_prompt(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1877, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1684, in generate
+    self._generate_with_cache(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 2022, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1984, in _generate
+    _handle_openai_api_error(e)
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1979, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1318, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1440, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1213, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01m5e68g39ehwbtxhshygc24ax` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 13562, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+During task with name 'model' and id 'c2495efb-cd67-1e64-c60e-126f8b8046a4'
+
+2026-10-26 16:33:13,993 ERROR Traceback (most recent call last):
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/stage-02-skills/app.py", line 484, in run_turn
+    for mode, chunk in stream:
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py", line 3034, in stream
+    for _ in runner.tick(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py", line 345, in tick
+    _panic_or_proceed(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py", line 689, in _panic_or_proceed
+    raise exc
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_executor.py", line 80, in done
+    task.result()
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain/agents/factory.py", line 1543, in model_node
+    result = wrap_model_call_handler(request, _execute_model_sync)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain/agents/factory.py", line 327, in normalized_single
+    return _to_composed_result(single_handler(request, handler))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/stage-02-skills/observer.py", line 134, in wrap_model_call
+    response = handler(request)  # gọi đúng một lần
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain/agents/factory.py", line 1506, in _execute_model_sync
+    output = model_.invoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py", line 6014, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 488, in invoke
+    self.generate_prompt(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1877, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1684, in generate
+    self._generate_with_cache(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 2022, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1984, in _generate
+    _handle_openai_api_error(e)
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1979, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1318, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1440, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1213, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01m5e68g39ehwbtxhshygc24ax` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 8407, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+During task with name 'model' and id 'ad161421-e787-0194-c0ac-89e6d5b98539'
+
+2026-10-26 16:50:44,654 ERROR Traceback (most recent call last):
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/stage-02-skills/app.py", line 495, in run_turn
+    for mode, chunk in stream:
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py", line 3034, in stream
+    for _ in runner.tick(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py", line 345, in tick
+    _panic_or_proceed(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py", line 689, in _panic_or_proceed
+    raise exc
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_executor.py", line 80, in done
+    task.result()
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain/agents/factory.py", line 1543, in model_node
+    result = wrap_model_call_handler(request, _execute_model_sync)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain/agents/factory.py", line 327, in normalized_single
+    return _to_composed_result(single_handler(request, handler))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/stage-02-skills/observer.py", line 134, in wrap_model_call
+    response = handler(request)  # gọi đúng một lần
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain/agents/factory.py", line 1506, in _execute_model_sync
+    output = model_.invoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py", line 6014, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 488, in invoke
+    self.generate_prompt(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1877, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1684, in generate
+    self._generate_with_cache(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 2022, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1984, in _generate
+    _handle_openai_api_error(e)
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1979, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1318, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1440, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1213, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01m5e68g39ehwbtxhshygc24ax` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 8432, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+During task with name 'model' and id 'd9325c96-ba28-054c-61a0-a14704981a5e'
+
+2026-10-26 17:00:10,697 ERROR Traceback (most recent call last):
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/stage-02-skills/app.py", line 495, in run_turn
+    for mode, chunk in stream:
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py", line 3034, in stream
+    for _ in runner.tick(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py", line 345, in tick
+    _panic_or_proceed(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py", line 689, in _panic_or_proceed
+    raise exc
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_executor.py", line 80, in done
+    task.result()
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain/agents/factory.py", line 1543, in model_node
+    result = wrap_model_call_handler(request, _execute_model_sync)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain/agents/factory.py", line 327, in normalized_single
+    return _to_composed_result(single_handler(request, handler))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/stage-02-skills/observer.py", line 134, in wrap_model_call
+    response = handler(request)  # gọi đúng một lần
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain/agents/factory.py", line 1506, in _execute_model_sync
+    output = model_.invoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/runnables/base.py", line 6014, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 488, in invoke
+    self.generate_prompt(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1877, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 1684, in generate
+    self._generate_with_cache(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/language_models/chat_models.py", line 2022, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1984, in _generate
+    _handle_openai_api_error(e)
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_openai/chat_models/base.py", line 1979, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1318, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1440, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1213, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01m5e68g39ehwbtxhshygc24ax` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 8240, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+During task with name 'model' and id 'd4bfb216-62a3-6664-afde-89552c57a3ac'
+
+2026-10-26 17:13:39,463 ERROR Traceback (most recent call last):
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/stage-02-skills/app.py", line 495, in run_turn
+    for mode, chunk in stream:
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/main.py", line 3034, in stream
+    for _ in runner.tick(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py", line 345, in tick
+    _panic_or_proceed(
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_runner.py", line 689, in _panic_or_proceed
+    raise exc
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_executor.py", line 80, in done
+    task.result()
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/pregel/_retry.py", line 617, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 707, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/_internal/_runnable.py", line 447, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py", line 822, in _func
+    outputs = list(
+              ^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/runnables/config.py", line 650, in _wrapped_fn
+    return contexts.pop().run(fn, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py", line 1061, in _run_one
+    content = _handle_tool_error(e, flag=self._handle_tool_errors)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py", line 434, in _handle_tool_error
+    content = flag(e)  # type: ignore [assignment, call-arg]
+              ^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py", line 391, in _default_handle_tool_errors
+    raise e
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py", line 1055, in _run_one
+    return self._wrap_tool_call(tool_request, execute)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain/agents/factory.py", line 746, in composed
+    return outer(request, call_inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/stage-02-skills/tool_result_budget.py", line 56, in wrap_tool_call
+    result = handler(request)
+             ^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain/agents/factory.py", line 743, in call_inner
+    return inner(req, execute)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/stage-02-skills/observer.py", line 165, in wrap_tool_call
+    result = handler(request)
+             ^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py", line 1051, in execute
+    return self._execute_tool_sync(req, input_type, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py", line 1006, in _execute_tool_sync
+    content = _handle_tool_error(e, flag=self._handle_tool_errors)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py", line 434, in _handle_tool_error
+    content = flag(e)  # type: ignore [assignment, call-arg]
+              ^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py", line 391, in _default_handle_tool_errors
+    raise e
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langgraph/prebuilt/tool_node.py", line 958, in _execute_tool_sync
+    response = tool.invoke(call_args, config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/tools/base.py", line 764, in invoke
+    return self.run(tool_input, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/tools/base.py", line 1132, in run
+    raise error_to_raise
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/tools/base.py", line 1098, in run
+    response = context.run(self._run, *tool_args, **tool_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/.venv/lib/python3.12/site-packages/langchain_core/tools/structured.py", line 152, in _run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/Kì 1 năm 3/SE373/agent-tools-skills-lab/agent-tools-skills-lab/stage-02-skills/tools/files.py", line 186, in read_log_time_range
+    with file_path.open(encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data/server.log'
+During task with name 'tools' and id '3e2d85a7-4f42-b722-dbef-f953d7c856f2'
+

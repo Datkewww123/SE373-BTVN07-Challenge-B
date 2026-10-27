@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "notes": [
+    {
+      "id": "4747ac",
+      "text": "User đã tăng pool size lên 20 nhưng vẫn gặp lỗi DB_POOL_EXHAUSTED trong module payment; cần thử hướng khác.",
+      "created": "2026-10-26"
+    },
+    {
+      "id": "498760",
+      "text": "User đã tăng pool size lên 20 nhưng vẫn gặp lỗi DB_POOL_EXHAUSTD trong module payment; cần thử hướng khác.",
+      "created": "2026-10-26"
+    },
+    {
+      "id": "54f90d",
+      "text": "User đã tăng pool size lên 20 nhưng vẫn gặp lỗi DB_POOL_EXHAUSTED trong module payment, cần thử hướng khác.",
+      "created": "2026-10-26"
+    },
+    {
+      "id": "f1bb81",
+      "text": "User đã tăng pool size lên 20 nhưng vẫn gặp lỗi DB_POOL_EXHAUSTED, cần thử hướng khác.",
+      "created": "2026-10-26"
+    },
+    {
+      "id": "b9faf1",
+      "text": "Đã tăng pool size lên 20 nhưng vẫn gặp lỗi DB_POOL_EXHAUSTED, cần thử hướng khác.",
+      "created": "2026-10-26"
+    }
+  ]
+}
